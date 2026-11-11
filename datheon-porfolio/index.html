@@ -11,10 +11,10 @@
 
   <!-- NavBar -->
   <header>
-    <nav class="Navbar">
+    <nav class="navbar">
       <a href="#home" class="logo">Waqi.</a>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -22,8 +22,11 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button id="theme-toggle">☀️</button>
-      <button id="menu-toggle">☰</button>
+      <div class="nav-actions">
+        <button id="theme-toggle">☀️</button>
+        <button id="menu-toggle">☰</button>
+      </div>
+
     </nav>
   </header>
 
@@ -38,19 +41,42 @@
         I build responsive and user-friendly 
         webistes using mordern web technologies.
       </p>
-
-      <a href="#projects">View My Projects</a>
-      <a href="#contact">Contact Me</a>
+      
+      <div>
+        <button id="projectBtn" ><a href="#projects">View My Projects</a></button>
+        <button id="contactBtn" ><a href="#contact">Contact Me</a></button>
+      </div>
+      
     </section>
 
     <!-- About Section-->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <p>
-        I'm a Computer Science Engineering graduate
-        interested in frontend development and 
-        building modern web application.
-      </p>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>I'm Mohammed Waqi Ahmed</h3>
+
+          <p>
+            I'm a Computer Science Engineering graduate
+            passionate about frontend development.
+            I enjoy building responsive and interactive
+            web applications using modern technologies.
+          </p>
+
+          <p>
+            Currently, I'm improving my JavaScript and
+            React skills while working on practical
+            frontend projects.
+          </p>
+        </div>
+
+        <div class="about-info">
+          <p><strong>Education</strong> B.Tech CSE</p>
+          <p><strong>Graduation</strong> 2025 </p>
+          <p><strong>Focus</strong> Frontend Development </p>
+          <p><strong>Location</strong> Hyderabad, India</p>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section-->
@@ -68,14 +94,57 @@
     <!--Contact Section-->
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>Email: waqimohammed999@gmail.com</p>
-      <a href="" target="_blank">
+
+      <p>Have a project or opportunity? Feel free to contact me.</p>
+      
+      <form id="contact-form">
+
+        <input type="text"
+        id="name"
+        placeholder="Your Name"
+        required
+        >
+        <input type="email"
+        id="email"
+        placeholder="Your Email"
+        required
+        >
+        <textarea 
+        id="message"
+        placeholder="Your Message"
+        required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+        <p id="form-status"></p>
+
+      </form>
+
+
+      <div class="social-links">
+        <a id="githubBtn" href="https://github.com/WaqiMohammed" target="_blank">
         GitHub
       </a>
-      <a href="" target="_blank">
+      <a id="linkedinBtn" href="https://www.linkedin.com/in/mohammed-waqi-ahmed" target="_blank">
         LinkedIn
       </a>
+      </div>
     </section>
+    <!-- modal section -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+
+        <button id="close-modal" class="close-btn">
+          &times;
+        </button>
+        
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-description"></p>
+
+      </div>
+    </div>
   </main>
   
   <footer>
@@ -83,6 +152,5 @@
   </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
