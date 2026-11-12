@@ -59,10 +59,10 @@ addTaskBtn.addEventListener('click' , () => {
         ${task.dueDate}
         <div class="cardBtn">
         <input type="checkbox" data-id= "${task.id}" ${task.completed ? 'checked' : ''}>
-        <button class="edit-Btn" data-id ="${task.id}" >
+        <button id="EditBtn" class="edit-Btn" data-id ="${task.id}" >
         Edit
         </button>
-        <button class="delete-Btn" data-id ="${task.id}" >
+        <button id="DeleteBtn" class="delete-Btn" data-id ="${task.id}" >
         Delete
         </button>
         </div>
