@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header >
+      <h1>Task Manager</h1>
+    </header>
+    <input type="text" id="task-input" placeholder="Enter Your Task">
+
+    <div class="category-section">
+      <select id="category">
+        <option value="">Select Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+      <input type="date" id="task-date">
+      <button type="button" id="add-task">+ Add Task</button>
+    </div>
+    <!-- this is search input -->
+    <input type="search"  id="search-input" placeholder="Search tasks...">
+
+
+    <div class="filters">
+      <input name="filter" type="radio" id="all" value="all" checked>
+      <label for="all">All</label>
+
+
+      <input name="filter" type="radio" id="active" value="active" >
+      <label for="active">Active</label>
+
+  
+      <input name="filter" type="radio" id="completed" value="completed">
+      <label for="completed">Completed</label>
+    </div>
+
+
+    <div>
+      <ul id="task-list">
+        
+      </ul>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
