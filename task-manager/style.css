@@ -25,6 +25,7 @@ header {
 header h1 {
   font-size: 32px;
   color: #f8fafc;
+  font-family: cursive;
 }
 #task-input {
   /* outline: 2px solid #38bdf8; */
@@ -40,7 +41,7 @@ header h1 {
 }
 #task-input:focus,
 #search-input:focus {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid white;
   outline-offset: 2px;
 }
 .category-section{
@@ -57,6 +58,8 @@ header h1 {
   border: 1px solid #334155;
   border-radius: 8px;
   font-size: 15px;
+  cursor: pointer;
+  outline: none;
 }
 #add-task {
   padding: 12px 20px;
@@ -123,11 +126,28 @@ header h1 {
   border-radius: 8px;
   cursor: pointer;
 }
-
+.task-card #EditBtn {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+.task-card #EditBtn:hover {
+  background-color: rgba(16, 16, 16, 0.905);
+  transition: 0.3s;
+}
+.task-card #DeleteBtn:hover {
+  background-color: rgb(118, 3, 3);
+  transition: 0.3s;
+}
 
 @media (max-width: 600px) {
   .category-section {
     flex-direction: column;
     align-items: stretch;
+  }
+  #task-date {
+    margin: 5px 0;
+  }
+  .filters {
+    flex-direction: column;
   }
 }
